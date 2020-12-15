@@ -29,7 +29,7 @@ public class TemperatureController implements Closeable {
         client.connect(options);
         client.subscribe(temperatureTopic, (tt, receivedMessage) -> {
             int value = Integer.parseInt(receivedMessage.toString());
-            MqttMessage transmitMessage = new MqttMessage((value > 22 ? "+" : "-").getBytes());
+            MqttMessage transmitMessage = new MqttMessage((value > 22 ? "-" : "+").getBytes());
             transmitMessage.setQos(qos);
             client.publish(controlTopic, transmitMessage);
         });
