@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
         String broker = "tcp://broker.hivemq.com:1883";
         String clientId = "clientId-JJS2";
-        String temperatureTopic = "temperature-topic/1";
-        String controlTopic = "control-topic/2";
+        String temperatureTopic = "JoshShJe/temp";
+        String controlTopic = "JoshShJe/control";
         int qos = 2;
 
         try {
